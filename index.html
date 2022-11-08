@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> My first web page</title>
+        <link rel="icon" href="https://raw.githubusercontent.com/gitdagray/html_course/main/02_lesson/html5.png"  type="image/icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+        <h1> Vinayvasantham</h1>
+        <p>This is my first webpage
+            <br>&nbsp;&nbsp;&nbsp;... this is my first web page
+            <br>&nbsp;&nbsp;&nbsp;... this is my first webpage
+            <br>&nbsp;&nbsp;&nbsp;... this in my first webpage
+        </p>
+        </header>
+        <hr>
+
+        <main>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#mylaptopfeatures">My laptop features</a>
+                    </li>
+                    <li>
+                        <a href="#Theplacesilike">The places i like</a>
+                    </li>
+                    <li>
+                        <a href="#contactme">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <hr>
+
+            <section id ="mylaptopfeatures">
+            <h3>My laptop features</h3>
+                <ol>
+                    <li>my laptop company is ASUS</li>
+                    <li>my laptop has 8gb ram</li>
+                    <li>my laptop has 512gb internal storage</li>
+                    <li>my laptop storage type is SSD</li>
+                </ol>
+            <hr>
+            <h3>My laptop features</h3>
+                <ul>
+                    <li>my laptop company is ASUS</li>
+                    <li>my laptop has 8gb ram</li>
+                    <li>my laptop has 512gb internal storage</li>
+                    <li>my laptop storage type is SSD</li>
+                </ul>
+            <hr>
+            </section>
+
+
+            <article id="contactme">
+
+                <h3>Contact me</h3>
+                <p>Thank you for intrest for contacting me</p>
+                <p>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                            <label for="firstname">Firstname :</label>
+                            <input type="text" name="firstname" id="firstname" 
+                            placeholder="Enter text" autocomplete="on" required>
+                        <p>
+                            <label for="secondname" > Secondname: </label>
+                            <input type="text" name="secondname" id="secondname" 
+                            placeholder="Enter text here" autocomplete="on" required autofocus >
+                        </p>
+                        <p>
+                            <label for="password">Password: </label>
+                            <input type="password" name="Password" id="password" 
+                            placeholder="Enter text here" autocomplete="on" required >
+                        </p>
+                        <p>
+                            <label for="phone">Phone: </label>
+                            <input type="tel" name="Phone" id="phone" 
+                            placeholder="0000000000" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        </p>
+                        <p>
+                            <label for="Year birth year">Year of birth :</label>
+                            <input type="number" name="Year of birth" id="Yearofbirth" 
+                            min="1990" max="2020" step="1" value="2000" required>
+                        </p>
+                        <p>
+                        <label for="Favouritecoffee">Favourite coffee :</label>
+                        <!-- <input type="text" name="Favourite coffee" id="Favourite coffee"> -->
+                        <select name="Favouritecoffee" id="Favouritecoffee" multiple size="5">
+                            <optgroup label="coffee">
+                            <option value="Normal coffee">Normal Coffee</option>
+                            <option value="Cold coffee">Cold coffee</option>
+                            </optgroup>
+                            <optgroup label="Espresso drinks">
+                            <option value="capuccino" selected>capuccino</option>
+                            <option value="Latte">Latte</option>
+                            <option value="Cortado">Cartado</option>
+                            </optgroup>
+                            <option value="other">Other</option>
+                        </select>
+                        </p>
+                        <p>
+                            <label for="Favouritecoffee">Favourite coffee : </label>
+                            <input type="text" name="coffee" id="coffee" list="coffee-list">
+                            <datalist id="coffee-list">
+                                <option value="Normal coffee">
+                                <option value="Cold coffee">
+                                <option value="Latte">
+                                <option value="capuccino">
+                                <option value="Cartado">
+                            </datalist>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>What is your favourite food?</legend>
+                        <p>
+                            <input type="radio" name="food" id="Biriyani" value="Biriyani">
+                            <label for="Biriyani">Biryani</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="pizza" value="pizza">
+                            <label for="pizza">Pizza</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="chicken" value="chicken">
+                            <label for="chicken">Chicken</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Which is your favourite pet?</legend>
+                        <p>
+                            <input type="checkbox" name="pets" id="cat" value="cat">
+                            <label for="cat">Cat</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="dog" value="dog">
+                            <label for="dog">Dog</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="fish" value="fish">
+                            <label for="fish">Fish</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="other" value="other">
+                            <label for="other">Other</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Send me a note </legend>
+                        <br>
+                        <label for="message">Your Message:</label>
+                        <p>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button formaction="https://httpbin.org/post" formmethod="post">Post</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </article>
+
+            <!-- This web page is just for pratice-->
+            <hr>
+            <h2>HTML icon</h2>
+            <img src="img/html_logo_300x300.png" alt="Give correct name for image" title="icon" width="200" height="200">
+
+            <h2>my sir name</h2> 
+            <p>vasantham</p>
+            <p><abbr title="VinayVasantham">VV</abbr></p>
+            <address>
+                D.NO : 6-355-8
+                keshavanagar,Dharmavaram, Anantaput district,
+                Andhra Pradesh.
+            </address>
+            <hr>
+
+            <h3> combination</h3>
+            <p>it combines both my <strong>name</strong> and <em> sirname</em></p>
+            <hr>
+
+            &lt;&lt;&lt;&copy; <a href="about.html">about me</a> &gt;&gt;&gt;
+
+            <hr>
+            <h2>Table</h2>
+            <table>
+                <tr>
+                <th>My name</th>
+                </tr>
+                <tr>
+                    <td>vasantham Suresh</td>
+                    <!-- <td>Suresh</td> -->
+                </tr>
+                <tr>
+                    <td>vasantham vinay</td>
+                    <!-- <td>vinay</td> -->
+                </tr>
+            </table>
+            <hr>
+
+
+            <p>click to google search <br> <a href="https://www.google.com"> Click here</a></p>
+
+            <hr>
+
+        
+            <h2>The places i like</h2>
+            <img src="img/caribbean.jpg" alt="Give correct image type" title="Maldives" width="400" height="225">
+            <figure>
+                <figcaption>Maldives</figcaption>
+            </figure>
+            <br>
+            <img src="img/vacation.jpg" alt="Give correct name for image" title="Goa" width="400" height="225" loading="lazy">
+            <figure>
+                <figcaption>Goa</figcaption>
+            </figure>
+            <br>
+
+            <hr>
+            <section id="Theplacesilike">
+                <h3>My details</h3>
+                <dl>
+                    <dt>name</dt>
+                    <dd>My name is vinay vasantham</dd>
+                    <dt>best sport</dt>
+                    <dd>volley ball</dd>
+                    <dt>intrest</dt>
+                    <dd>Workouts for good body outfit</dd>
+                </dl>
+            </section>
+        </main>
+
+        <hr>
+        <aside>
+            <details>
+                <summary>Guess <mark> how many hours </mark>i code daily</summary>
+                <p>daily i will code for <time>02:00</time>hours</p>
+            </details>
+        </aside>
+        <hr>
+
+        <footer>
+        <a href="/"> Back to pagetop</a>
+        </footer>
+        <hr>
+
+    </body>
+</html>
